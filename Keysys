@@ -1,0 +1,3 @@
+local KeySys = {"KEY"}
+
+print(KeySys[1])
