@@ -1,6 +1,7 @@
 local arrayTable = {"1234"}
-
+wait(5)
 for i = 1,#arrayTable do
+print(arrayTable[i]
     if KeyEncryptionBox.Text == arrayTable[i] then
     	for i, Stuff in pairs(Encryption.BackgroundFrame:GetChildren()) do
 			Stuff.Visible = false
