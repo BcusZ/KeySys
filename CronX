@@ -1,0 +1,866 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local Encryption = Instance.new("ScreenGui")
+local SlideIn = Instance.new("Frame")
+local BackgroundFrame = Instance.new("Frame")
+local KeyEncryptionBox = Instance.new("TextBox")
+local Verify = Instance.new("TextButton")
+local Verifying = Instance.new("TextLabel")
+local KinxHub = Instance.new("ScreenGui")
+local Hub = Instance.new("Frame")
+local Hub2 = Instance.new("ScrollingFrame")
+local CreditsFrameFolder = Instance.new("Folder")
+local CreditsFrame = Instance.new("Frame")
+local Title = Instance.new("TextLabel")
+local Credit1 = Instance.new("TextLabel")
+local Credit2 = Instance.new("TextLabel")
+local FunctionsFolder = Instance.new("Folder")
+local Functions = Instance.new("Frame")
+local BindTpTitle = Instance.new("TextLabel")
+local BindTp = Instance.new("TextButton")
+local Roundify2 = Instance.new("ImageLabel")
+local Jump = Instance.new("TextButton")
+local PlayerTp = Instance.new("TextButton")
+local Speed = Instance.new("TextButton")
+local Pyramid = Instance.new("TextButton")
+local Noclip = Instance.new("TextButton")
+local Roundify3 = Instance.new("ImageLabel")
+local NoclipTitle = Instance.new("TextLabel")
+local SettingsFrameFolder = Instance.new("Folder")
+local SettingsFrame = Instance.new("Frame")
+local KeyBindBox = Instance.new("TextBox")
+local KeyBindTitle = Instance.new("TextLabel")
+local BypassTitle = Instance.new("TextLabel")
+local ActivateBypass = Instance.new("TextButton")
+local Roundify = Instance.new("ImageLabel")
+local HelpFrameFolder = Instance.new("Folder")
+local help = Instance.new("Frame")
+local Credit1_2 = Instance.new("TextLabel")
+local Credit2_2 = Instance.new("TextLabel")
+local Side = Instance.new("Frame")
+local Roundify_2 = Instance.new("ImageLabel")
+local InPairs = Instance.new("Folder")
+local Settings = Instance.new("TextButton")
+local Main = Instance.new("TextButton")
+local Help = Instance.new("TextButton")
+local Credits = Instance.new("TextButton")
+local Close = Instance.new("TextButton")
+local Roundify_3 = Instance.new("ImageLabel")
+local Title_2 = Instance.new("TextLabel")
+local Value = Instance.new("TextBox")
+
+--Properties:
+
+Encryption.Name = "Encryption"
+Encryption.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Encryption.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+SlideIn.Name = "SlideIn"
+SlideIn.Parent = Encryption
+SlideIn.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+SlideIn.BorderColor3 = Color3.fromRGB(255, 255, 255)
+SlideIn.Position = UDim2.new(-0.00219618995, 0, 0.322160155, 0)
+SlideIn.Size = UDim2.new(0, 3, 0, 100)
+
+BackgroundFrame.Name = "BackgroundFrame"
+BackgroundFrame.Parent = Encryption
+BackgroundFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+BackgroundFrame.BackgroundTransparency = 1.000
+BackgroundFrame.BorderColor3 = Color3.fromRGB(255, 255, 255)
+BackgroundFrame.BorderSizePixel = 2
+BackgroundFrame.Position = UDim2.new(0.402562052, 0, 0.0861694366, 0)
+BackgroundFrame.Size = UDim2.new(0.284598023, 0, 0.808525443, 0)
+BackgroundFrame.Visible = false
+BackgroundFrame.ZIndex = 2
+
+KeyEncryptionBox.Name = "KeyEncryptionBox"
+KeyEncryptionBox.Parent = BackgroundFrame
+KeyEncryptionBox.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+KeyEncryptionBox.BackgroundTransparency = 0.800
+KeyEncryptionBox.BorderColor3 = Color3.fromRGB(255, 255, 255)
+KeyEncryptionBox.Position = UDim2.new(0.0434146449, 0, 0.359146535, 0)
+KeyEncryptionBox.Size = UDim2.new(0.921950579, 0, 0.0644896552, 0)
+KeyEncryptionBox.Font = Enum.Font.SourceSans
+KeyEncryptionBox.PlaceholderColor3 = Color3.fromRGB(255, 255, 255)
+KeyEncryptionBox.PlaceholderText = "Enter Key"
+KeyEncryptionBox.Text = ""
+KeyEncryptionBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+KeyEncryptionBox.TextScaled = true
+KeyEncryptionBox.TextSize = 14.000
+KeyEncryptionBox.TextWrapped = true
+
+Verify.Name = "Verify"
+Verify.Parent = BackgroundFrame
+Verify.BackgroundColor3 = Color3.fromRGB(60, 255, 115)
+Verify.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Verify.BorderSizePixel = 0
+Verify.Position = UDim2.new(0.285099685, 0, 0.449459702, 0)
+Verify.Size = UDim2.new(0.441633672, 0, 0.0483672433, 0)
+Verify.Font = Enum.Font.SourceSans
+Verify.Text = "ENTER"
+Verify.TextColor3 = Color3.fromRGB(255, 255, 255)
+Verify.TextScaled = true
+Verify.TextSize = 14.000
+Verify.TextWrapped = true
+
+Verifying.Name = "Verifying"
+Verifying.Parent = BackgroundFrame
+Verifying.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Verifying.BackgroundTransparency = 1.000
+Verifying.Position = UDim2.new(0.209534228, 0, 0.356996298, 0)
+Verifying.Size = UDim2.new(0.644720674, 0, 0.1151601, 0)
+Verifying.Visible = false
+Verifying.Font = Enum.Font.SourceSansLight
+Verifying.Text = "Verifying..."
+Verifying.TextColor3 = Color3.fromRGB(2, 255, 103)
+Verifying.TextScaled = true
+Verifying.TextSize = 14.000
+Verifying.TextWrapped = true
+
+KinxHub.Name = "KinxHub"
+KinxHub.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+Hub.Name = "Hub"
+Hub.Parent = KinxHub
+Hub.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+Hub.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Hub.BorderSizePixel = 0
+Hub.Position = UDim2.new(1.22899997, 0, 0.193000004, 0)
+Hub.Size = UDim2.new(0.379103035, 0, 0.512104273, 0)
+Hub.ZIndex = 2
+
+Hub2.Name = "Hub2"
+Hub2.Parent = Hub
+Hub2.Active = true
+Hub2.BackgroundColor3 = Color3.fromRGB(39, 39, 39)
+Hub2.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Hub2.BorderSizePixel = 0
+Hub2.Position = UDim2.new(0.337830782, 0, 0.0657432675, 0)
+Hub2.Size = UDim2.new(0.645748973, 0, 0.865814686, 0)
+Hub2.ZIndex = 2
+Hub2.CanvasPosition = Vector2.new(0, 11.9009705)
+
+CreditsFrameFolder.Name = "CreditsFrameFolder"
+CreditsFrameFolder.Parent = Hub2
+
+CreditsFrame.Name = "CreditsFrame"
+CreditsFrame.Parent = CreditsFrameFolder
+CreditsFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CreditsFrame.BackgroundTransparency = 1.000
+CreditsFrame.Position = UDim2.new(0.341692775, 0, 0.134966031, 0)
+CreditsFrame.Size = UDim2.new(0.313479632, 0, 0.369003683, 0)
+CreditsFrame.Visible = false
+
+Title.Name = "Title"
+Title.Parent = CreditsFrame
+Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title.BackgroundTransparency = 1.000
+Title.Position = UDim2.new(-0.509972572, 0, -0.592508018, 0)
+Title.Size = UDim2.new(2, 0, 0.716000021, 0)
+Title.ZIndex = 2
+Title.Font = Enum.Font.SourceSans
+Title.Text = "CREDITS"
+Title.TextColor3 = Color3.fromRGB(88, 88, 255)
+Title.TextScaled = true
+Title.TextSize = 14.000
+Title.TextWrapped = true
+
+Credit1.Name = "Credit 1"
+Credit1.Parent = CreditsFrame
+Credit1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Credit1.BackgroundTransparency = 1.000
+Credit1.Position = UDim2.new(-0.509972572, 0, -0.0474441126, 0)
+Credit1.Size = UDim2.new(2, 0, 0.216453671, 0)
+Credit1.ZIndex = 2
+Credit1.Font = Enum.Font.SourceSans
+Credit1.Text = "BcusZ - Ui/Design"
+Credit1.TextColor3 = Color3.fromRGB(255, 255, 255)
+Credit1.TextScaled = true
+Credit1.TextSize = 14.000
+Credit1.TextWrapped = true
+
+Credit2.Name = "Credit 2"
+Credit2.Parent = CreditsFrame
+Credit2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Credit2.BackgroundTransparency = 1.000
+Credit2.Position = UDim2.new(-0.670000017, 0, 0.275191694, 0)
+Credit2.Size = UDim2.new(2.3499999, 0, 0.186150163, 0)
+Credit2.ZIndex = 2
+Credit2.Font = Enum.Font.SourceSans
+Credit2.Text = "amstuckstepbro - Scripts"
+Credit2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Credit2.TextScaled = true
+Credit2.TextSize = 14.000
+Credit2.TextWrapped = true
+
+FunctionsFolder.Name = "FunctionsFolder"
+FunctionsFolder.Parent = Hub2
+
+Functions.Name = "Functions"
+Functions.Parent = FunctionsFolder
+Functions.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Functions.BackgroundTransparency = 1.000
+Functions.Position = UDim2.new(0.341692775, 0, 0.104042798, 0)
+Functions.Size = UDim2.new(0.313479632, 0, 0.369003683, 0)
+
+BindTpTitle.Name = "BindTpTitle"
+BindTpTitle.Parent = Functions
+BindTpTitle.BackgroundColor3 = Color3.fromRGB(43, 43, 43)
+BindTpTitle.BackgroundTransparency = 1.000
+BindTpTitle.Position = UDim2.new(-0.968330801, 0, -0.221568957, 0)
+BindTpTitle.Size = UDim2.new(1.34000003, 0, 0.15584664, 0)
+BindTpTitle.ZIndex = 2
+BindTpTitle.Font = Enum.Font.SourceSansLight
+BindTpTitle.Text = "BindTp"
+BindTpTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
+BindTpTitle.TextScaled = true
+BindTpTitle.TextSize = 14.000
+BindTpTitle.TextWrapped = true
+
+BindTp.Name = "BindTp"
+BindTp.Parent = Functions
+BindTp.BackgroundColor3 = Color3.fromRGB(39, 39, 39)
+BindTp.BackgroundTransparency = 1.000
+BindTp.BorderSizePixel = 0
+BindTp.Position = UDim2.new(1.31617332, 0, -0.215437919, 0)
+BindTp.Size = UDim2.new(0.429192424, 0, 0.152745485, 0)
+BindTp.ZIndex = 3
+BindTp.Font = Enum.Font.SourceSans
+BindTp.Text = ""
+BindTp.TextColor3 = Color3.fromRGB(0, 0, 0)
+BindTp.TextSize = 14.000
+
+Roundify2.Name = "Roundify2"
+Roundify2.Parent = BindTp
+Roundify2.AnchorPoint = Vector2.new(0.5, 0.5)
+Roundify2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Roundify2.BackgroundTransparency = 1.000
+Roundify2.Position = UDim2.new(0.49999997, 0, 0.472700059, 0)
+Roundify2.Size = UDim2.new(0.500001669, 24, 0.538470864, 24)
+Roundify2.ZIndex = 2
+Roundify2.Image = "rbxassetid://3570695787"
+Roundify2.ImageColor3 = Color3.fromRGB(49, 49, 49)
+Roundify2.ScaleType = Enum.ScaleType.Slice
+Roundify2.SliceCenter = Rect.new(100, 100, 100, 100)
+Roundify2.SliceScale = 0.120
+
+Jump.Name = "Jump"
+Jump.Parent = Functions
+Jump.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Jump.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Jump.Position = UDim2.new(-0.779835582, 0, 0.686173856, 0)
+Jump.Size = UDim2.new(0.930000007, 0, 0.142859429, 0)
+Jump.ZIndex = 2
+Jump.Font = Enum.Font.SourceSansLight
+Jump.Text = "Jump"
+Jump.TextColor3 = Color3.fromRGB(255, 255, 255)
+Jump.TextScaled = true
+Jump.TextSize = 14.000
+Jump.TextWrapped = true
+
+PlayerTp.Name = "PlayerTp"
+PlayerTp.Parent = Functions
+PlayerTp.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+PlayerTp.BorderColor3 = Color3.fromRGB(0, 0, 0)
+PlayerTp.Position = UDim2.new(-0.760866523, 0, 0.369404793, 0)
+PlayerTp.Size = UDim2.new(0.930000007, 0, 0.142859429, 0)
+PlayerTp.ZIndex = 2
+PlayerTp.Font = Enum.Font.SourceSansLight
+PlayerTp.Text = "PlayerTp"
+PlayerTp.TextColor3 = Color3.fromRGB(255, 255, 255)
+PlayerTp.TextScaled = true
+PlayerTp.TextSize = 14.000
+PlayerTp.TextWrapped = true
+
+Speed.Name = "Speed"
+Speed.Parent = Functions
+Speed.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Speed.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Speed.Position = UDim2.new(1.05397594, 0, 0.367295623, 0)
+Speed.Size = UDim2.new(0.930000007, 0, 0.142859429, 0)
+Speed.ZIndex = 2
+Speed.Font = Enum.Font.SourceSansLight
+Speed.Text = "Speed"
+Speed.TextColor3 = Color3.fromRGB(255, 255, 255)
+Speed.TextScaled = true
+Speed.TextSize = 14.000
+Speed.TextWrapped = true
+
+Pyramid.Name = "Pyramid"
+Pyramid.Parent = Functions
+Pyramid.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Pyramid.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Pyramid.Position = UDim2.new(1.05127919, 0, 0.686173737, 0)
+Pyramid.Size = UDim2.new(0.930000007, 0, 0.142859429, 0)
+Pyramid.ZIndex = 2
+Pyramid.Font = Enum.Font.SourceSansLight
+Pyramid.Text = "Pyramid"
+Pyramid.TextColor3 = Color3.fromRGB(255, 255, 255)
+Pyramid.TextScaled = true
+Pyramid.TextSize = 14.000
+Pyramid.TextWrapped = true
+
+Noclip.Name = "Noclip"
+Noclip.Parent = Functions
+Noclip.BackgroundColor3 = Color3.fromRGB(39, 39, 39)
+Noclip.BackgroundTransparency = 1.000
+Noclip.BorderSizePixel = 0
+Noclip.Position = UDim2.new(1.31617343, 0, 0.050634712, 0)
+Noclip.Size = UDim2.new(0.429192424, 0, 0.152745485, 0)
+Noclip.ZIndex = 3
+Noclip.Font = Enum.Font.SourceSans
+Noclip.Text = ""
+Noclip.TextColor3 = Color3.fromRGB(0, 0, 0)
+Noclip.TextSize = 14.000
+
+Roundify3.Name = "Roundify3"
+Roundify3.Parent = Noclip
+Roundify3.AnchorPoint = Vector2.new(0.5, 0.5)
+Roundify3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Roundify3.BackgroundTransparency = 1.000
+Roundify3.Position = UDim2.new(0.5, 0, 0.472699881, 0)
+Roundify3.Size = UDim2.new(0.500001669, 24, 0.538470864, 24)
+Roundify3.ZIndex = 2
+Roundify3.Image = "rbxassetid://3570695787"
+Roundify3.ImageColor3 = Color3.fromRGB(49, 49, 49)
+Roundify3.ScaleType = Enum.ScaleType.Slice
+Roundify3.SliceCenter = Rect.new(100, 100, 100, 100)
+Roundify3.SliceScale = 0.120
+
+NoclipTitle.Name = "NoclipTitle"
+NoclipTitle.Parent = Functions
+NoclipTitle.BackgroundColor3 = Color3.fromRGB(43, 43, 43)
+NoclipTitle.BackgroundTransparency = 1.000
+NoclipTitle.Position = UDim2.new(-0.980252802, 0, 0.0494308919, 0)
+NoclipTitle.Size = UDim2.new(1.34000003, 0, 0.15584664, 0)
+NoclipTitle.ZIndex = 2
+NoclipTitle.Font = Enum.Font.SourceSansLight
+NoclipTitle.Text = "Noclip"
+NoclipTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
+NoclipTitle.TextScaled = true
+NoclipTitle.TextSize = 14.000
+NoclipTitle.TextWrapped = true
+
+SettingsFrameFolder.Name = "SettingsFrameFolder"
+SettingsFrameFolder.Parent = Hub2
+
+SettingsFrame.Name = "SettingsFrame"
+SettingsFrame.Parent = SettingsFrameFolder
+SettingsFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SettingsFrame.BackgroundTransparency = 1.000
+SettingsFrame.Position = UDim2.new(0.341692775, 0, 0.0735481232, 0)
+SettingsFrame.Size = UDim2.new(0.313479632, 0, 0.369003683, 0)
+SettingsFrame.Visible = false
+
+KeyBindBox.Name = "KeyBindBox"
+KeyBindBox.Parent = SettingsFrame
+KeyBindBox.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
+KeyBindBox.BorderColor3 = Color3.fromRGB(255, 255, 255)
+KeyBindBox.Position = UDim2.new(0.730000019, 0, -0.0716946274, 0)
+KeyBindBox.Size = UDim2.new(1.13, 0, 0.1471885, 0)
+KeyBindBox.ZIndex = 2
+KeyBindBox.Font = Enum.Font.SourceSans
+KeyBindBox.PlaceholderColor3 = Color3.fromRGB(255, 255, 255)
+KeyBindBox.PlaceholderText = "EnterBind"
+KeyBindBox.Text = ""
+KeyBindBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+KeyBindBox.TextSize = 20.000
+KeyBindBox.TextWrapped = true
+
+KeyBindTitle.Name = "KeyBindTitle"
+KeyBindTitle.Parent = SettingsFrame
+KeyBindTitle.BackgroundColor3 = Color3.fromRGB(43, 43, 43)
+KeyBindTitle.BackgroundTransparency = 1.000
+KeyBindTitle.Position = UDim2.new(-0.938413143, 0, -0.0983241424, 0)
+KeyBindTitle.Size = UDim2.new(1.34000003, 0, 0.15584664, 0)
+KeyBindTitle.ZIndex = 2
+KeyBindTitle.Font = Enum.Font.SourceSansLight
+KeyBindTitle.Text = "KeyBind"
+KeyBindTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
+KeyBindTitle.TextScaled = true
+KeyBindTitle.TextSize = 14.000
+KeyBindTitle.TextWrapped = true
+
+BypassTitle.Name = "BypassTitle"
+BypassTitle.Parent = SettingsFrame
+BypassTitle.BackgroundColor3 = Color3.fromRGB(43, 43, 43)
+BypassTitle.BackgroundTransparency = 1.000
+BypassTitle.Position = UDim2.new(-0.968330801, 0, 0.187394693, 0)
+BypassTitle.Size = UDim2.new(1.34000003, 0, 0.15584664, 0)
+BypassTitle.ZIndex = 2
+BypassTitle.Font = Enum.Font.SourceSansLight
+BypassTitle.Text = "Bypass"
+BypassTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
+BypassTitle.TextScaled = true
+BypassTitle.TextSize = 14.000
+BypassTitle.TextWrapped = true
+
+ActivateBypass.Name = "ActivateBypass"
+ActivateBypass.Parent = SettingsFrame
+ActivateBypass.BackgroundColor3 = Color3.fromRGB(39, 39, 39)
+ActivateBypass.BackgroundTransparency = 1.000
+ActivateBypass.BorderSizePixel = 0
+ActivateBypass.Position = UDim2.new(1.32809532, 0, 0.203380257, 0)
+ActivateBypass.Size = UDim2.new(0, 36, 0, 31)
+ActivateBypass.ZIndex = 3
+ActivateBypass.Font = Enum.Font.SourceSans
+ActivateBypass.Text = ""
+ActivateBypass.TextColor3 = Color3.fromRGB(0, 0, 0)
+ActivateBypass.TextSize = 14.000
+
+Roundify.Name = "Roundify"
+Roundify.Parent = ActivateBypass
+Roundify.AnchorPoint = Vector2.new(0.5, 0.5)
+Roundify.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Roundify.BackgroundTransparency = 1.000
+Roundify.Position = UDim2.new(0.583333313, 0, 0.472700059, 0)
+Roundify.Size = UDim2.new(0.500001669, 24, 0.538470864, 24)
+Roundify.ZIndex = 2
+Roundify.Image = "rbxassetid://3570695787"
+Roundify.ImageColor3 = Color3.fromRGB(49, 49, 49)
+Roundify.ScaleType = Enum.ScaleType.Slice
+Roundify.SliceCenter = Rect.new(100, 100, 100, 100)
+Roundify.SliceScale = 0.120
+
+HelpFrameFolder.Name = "HelpFrameFolder"
+HelpFrameFolder.Parent = Hub2
+
+help.Name = "help"
+help.Parent = HelpFrameFolder
+help.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+help.BackgroundTransparency = 1.000
+help.Position = UDim2.new(0.341692775, 0, 0.10440369, 0)
+help.Size = UDim2.new(0.313479632, 0, 0.369003683, 0)
+help.Visible = false
+
+Credit1_2.Name = "Credit 1"
+Credit1_2.Parent = help
+Credit1_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Credit1_2.BackgroundTransparency = 1.000
+Credit1_2.Position = UDim2.new(-0.5, 0, -0.160000026, 0)
+Credit1_2.Size = UDim2.new(2, 0, 0.216453671, 0)
+Credit1_2.ZIndex = 2
+Credit1_2.Font = Enum.Font.SourceSans
+Credit1_2.Text = "To use BindTps Connect a KeyBind in Settings."
+Credit1_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Credit1_2.TextScaled = true
+Credit1_2.TextSize = 14.000
+Credit1_2.TextWrapped = true
+
+Credit2_2.Name = "Credit 2"
+Credit2_2.Parent = help
+Credit2_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Credit2_2.BackgroundTransparency = 1.000
+Credit2_2.Position = UDim2.new(-0.670000017, 0, 0.132332265, 0)
+Credit2_2.Size = UDim2.new(2.3499999, 0, 0.186150163, 0)
+Credit2_2.ZIndex = 2
+Credit2_2.Font = Enum.Font.SourceSans
+Credit2_2.Text = "Updates - Weekly Wednesdays"
+Credit2_2.TextColor3 = Color3.fromRGB(156, 99, 255)
+Credit2_2.TextScaled = true
+Credit2_2.TextSize = 14.000
+Credit2_2.TextWrapped = true
+
+Side.Name = "Side"
+Side.Parent = Hub
+Side.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Side.BackgroundTransparency = 1.000
+Side.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Side.Position = UDim2.new(0.0558058918, 0, 0.0667384863, 0)
+Side.Size = UDim2.new(0.22267206, 0, 0.865814686, 0)
+Side.ZIndex = 2
+
+Roundify_2.Name = "Roundify"
+Roundify_2.Parent = Side
+Roundify_2.AnchorPoint = Vector2.new(0.5, 0.5)
+Roundify_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Roundify_2.BackgroundTransparency = 1.000
+Roundify_2.Position = UDim2.new(0.440909088, 0, 0.496622711, 0)
+Roundify_2.Size = UDim2.new(0.863636374, 0, 1.00062537, 0)
+Roundify_2.ZIndex = 2
+Roundify_2.Image = "rbxassetid://3570695787"
+Roundify_2.ImageColor3 = Color3.fromRGB(39, 39, 39)
+Roundify_2.ScaleType = Enum.ScaleType.Slice
+Roundify_2.SliceCenter = Rect.new(100, 100, 100, 100)
+Roundify_2.SliceScale = 0.120
+
+InPairs.Name = "InPairs"
+InPairs.Parent = Side
+
+Settings.Name = "Settings"
+Settings.Parent = InPairs
+Settings.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Settings.BackgroundTransparency = 1.000
+Settings.Position = UDim2.new(0.0090909116, 0, 0.645756423, 0)
+Settings.Size = UDim2.new(0.863636374, 0, 0.0922509208, 0)
+Settings.ZIndex = 2
+Settings.Font = Enum.Font.SourceSansLight
+Settings.Text = "Settings"
+Settings.TextColor3 = Color3.fromRGB(255, 255, 255)
+Settings.TextScaled = true
+Settings.TextSize = 14.000
+Settings.TextWrapped = true
+
+Main.Name = "Main"
+Main.Parent = InPairs
+Main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Main.BackgroundTransparency = 1.000
+Main.Position = UDim2.new(0.0090909116, 0, 0.0590405799, 0)
+Main.Size = UDim2.new(0.863636374, 0, 0.0922509208, 0)
+Main.ZIndex = 3
+Main.Font = Enum.Font.SourceSansLight
+Main.Text = "Main"
+Main.TextColor3 = Color3.fromRGB(255, 255, 255)
+Main.TextScaled = true
+Main.TextSize = 14.000
+Main.TextWrapped = true
+
+Help.Name = "Help"
+Help.Parent = InPairs
+Help.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Help.BackgroundTransparency = 1.000
+Help.Position = UDim2.new(-0.0272727236, 0, 0.450184494, 0)
+Help.Size = UDim2.new(0.863636374, 0, 0.0922509208, 0)
+Help.ZIndex = 2
+Help.Font = Enum.Font.SourceSansLight
+Help.Text = "Help"
+Help.TextColor3 = Color3.fromRGB(255, 255, 255)
+Help.TextScaled = true
+Help.TextSize = 14.000
+Help.TextWrapped = true
+
+Credits.Name = "Credits"
+Credits.Parent = InPairs
+Credits.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Credits.BackgroundTransparency = 1.000
+Credits.Position = UDim2.new(0.0090909116, 0, 0.247232467, 0)
+Credits.Size = UDim2.new(0.863636374, 0, 0.0922509208, 0)
+Credits.ZIndex = 3
+Credits.Font = Enum.Font.SourceSansLight
+Credits.Text = "Credits"
+Credits.TextColor3 = Color3.fromRGB(255, 255, 255)
+Credits.TextScaled = true
+Credits.TextSize = 14.000
+Credits.TextWrapped = true
+
+Close.Name = "Close"
+Close.Parent = InPairs
+Close.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
+Close.BackgroundTransparency = 1.000
+Close.BorderColor3 = Color3.fromRGB(254, 254, 254)
+Close.Position = UDim2.new(0.142006278, 0, 0.845018387, 0)
+Close.Size = UDim2.new(0.581818163, 0, 0.0885608867, 0)
+Close.ZIndex = 2
+Close.Font = Enum.Font.SourceSansLight
+Close.Text = "-Close-"
+Close.TextColor3 = Color3.fromRGB(255, 255, 255)
+Close.TextScaled = true
+Close.TextSize = 14.000
+Close.TextWrapped = true
+
+Roundify_3.Name = "Roundify"
+Roundify_3.Parent = Hub
+Roundify_3.AnchorPoint = Vector2.new(0.5, 0.5)
+Roundify_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Roundify_3.BackgroundTransparency = 1.000
+Roundify_3.Position = UDim2.new(0.5, 0, 0.5, 0)
+Roundify_3.Size = UDim2.new(1.04858303, 0, 1.07667732, 0)
+Roundify_3.ZIndex = 0
+Roundify_3.Image = "rbxassetid://3570695787"
+Roundify_3.ImageColor3 = Color3.fromRGB(45, 45, 45)
+Roundify_3.ScaleType = Enum.ScaleType.Slice
+Roundify_3.SliceCenter = Rect.new(100, 100, 100, 100)
+Roundify_3.SliceScale = 0.120
+
+Title_2.Name = "Title"
+Title_2.Parent = Hub
+Title_2.BackgroundColor3 = Color3.fromRGB(43, 43, 43)
+Title_2.BackgroundTransparency = 1.000
+Title_2.Position = UDim2.new(0.827323675, 0, -0.0351437703, 0)
+Title_2.Size = UDim2.new(0.172064781, 0, 0.0990415365, 0)
+Title_2.ZIndex = 2
+Title_2.Font = Enum.Font.SourceSansLight
+Title_2.Text = "CronX"
+Title_2.TextColor3 = Color3.fromRGB(148, 55, 255)
+Title_2.TextScaled = true
+Title_2.TextSize = 14.000
+Title_2.TextWrapped = true
+
+Value.Name = "Value"
+Value.Parent = Hub
+Value.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Value.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Value.BorderSizePixel = 0
+Value.Position = UDim2.new(0.337830812, 0, 0.95846647, 0)
+Value.Size = UDim2.new(0.64372468, 0, 0.0415335447, 0)
+Value.ZIndex = 2
+Value.Font = Enum.Font.SourceSans
+Value.PlaceholderColor3 = Color3.fromRGB(255, 255, 255)
+Value.PlaceholderText = "Enter Player Id or Value"
+Value.Text = ""
+Value.TextColor3 = Color3.fromRGB(255, 255, 255)
+Value.TextScaled = true
+Value.TextSize = 14.000
+Value.TextWrapped = true
+
+
+wait(2)
+print("Loaded")
+SlideIn:TweenSize(UDim2.new(0, 1369, 0, 100),"InOut","Quad")
+local FrameBlur = Instance.new("BlurEffect")
+FrameBlur.Parent = game.Lighting
+FrameBlur.Size = 12
+FrameBlur.Enabled = true
+wait(1)
+for i, Stuff in pairs(Encryption:GetChildren()) do
+	Stuff.Visible = true
+end
+
+Verify.MouseButton1Click:Connect(function()
+	local arrayTable = {"orKcFJOep8","0NRrUelsTl","wqDIS52i0p"}
+	for i = 1,#arrayTable do
+		if KeyEncryptionBox.Text == arrayTable[i] then
+			for i, Stuff in pairs(Encryption.BackgroundFrame:GetChildren()) do
+				Stuff.Visible = false
+			end
+			Verifying.Visible = true
+			repeat
+				Verifying.Text = "Verifying."
+				wait(1)
+				Verifying.Text = "Verifying.."
+				wait(1)
+				Verifying.Text = "Verifying..."
+			until wait(3)
+			Verifying.Visible = false
+			print("Enter")
+			SlideIn:TweenSize(UDim2.new(0, 3, 0, 100),"InOut","Quad")
+			wait(2)
+			SlideIn.Visible = false
+			FrameBlur.Enabled = false
+			Hub.Visible = true
+			Hub:TweenPosition(UDim2.new(0.229, 0, 0.193, 0),"In","Quad")
+		else
+			print("Get a Key my slime")
+		end
+	end
+
+end)
+
+ActivateBypass.MouseButton1Down:Connect(function()
+	if ActivateBypass then
+		BypassTitle.Text = "Bypass is Patched! Wait for the update :C"
+		wait(3)
+		BypassTitle.Text = "KeyBind"
+	end
+	game:GetService("TweenService"):Create(Roundify,TweenInfo.new(0.3,Enum.EasingStyle.Bounce),{ImageColor3 = Color3.fromRGB(255,0,0)}):Play()
+end)
+
+
+for i, SideButtons in pairs(Side.InPairs:GetChildren()) do
+	SideButtons.MouseEnter:Connect(function()
+		game:GetService("TweenService"):Create(SideButtons,TweenInfo.new(0.3,Enum.EasingStyle.Bounce),{TextColor3 = Color3.fromRGB(165, 8, 255)}):Play()
+	end)
+	SideButtons.MouseLeave:Connect(function()
+		game:GetService("TweenService"):Create(SideButtons,TweenInfo.new(0.3,Enum.EasingStyle.Bounce),{TextColor3 = Color3.fromRGB(255,255,255)}):Play()
+	end)
+end
+
+
+for i,FuncButtons in pairs(Functions:GetChildren()) do
+	FuncButtons.MouseEnter:Connect(function()
+		game:GetService("TweenService"):Create(FuncButtons,TweenInfo.new(0.3,Enum.EasingStyle.Sine),{BackgroundColor3 = Color3.fromRGB(255,255,255)}):Play()
+	end)
+	FuncButtons.MouseLeave:Connect(function()
+		game:GetService("TweenService"):Create(FuncButtons,TweenInfo.new(0.3,Enum.EasingStyle.Sine),{BackgroundColor3 = Color3.fromRGB(0,0,0)}):Play()
+	end)
+end
+
+
+KinxHub.ResetOnSpawn = false
+
+Pyramid.MouseButton1Click:Connect(function()
+	local plr = game.Players.LocalPlayer
+	game:GetService("RunService").Stepped:Connect(function()
+		setsimulationradius(9e9,9e9)
+		plr.ReplicationFocus = workspace
+		settings().Physics.AllowSleep = false
+	end)
+
+	local runservice=game:service"RunService";
+	local player=game:service"Players"["LocalPlayer"];
+	local character=player["Character"];
+	local blacklisted="Head Torso HumanoidRootPart";
+	local limbs={};
+
+	character["Humanoid"].HipHeight=2;
+	--character["Head"]:FindFirstChildOfClass"SpecialMesh":Destroy();
+
+	for i,v in next,character:children() do
+		if (v.ClassName=="Part") and not blacklisted:find(v.Name) then
+			v:BreakJoints();
+			limbs[v.Name]=v;
+		end
+	end
+
+	while runservice["Heartbeat"]:Wait() do
+		limbs["Left Leg"].CFrame=character["HumanoidRootPart"].CFrame*CFrame.new(-1,-2,0);
+		limbs["Right Leg"].CFrame=character["HumanoidRootPart"].CFrame*CFrame.new(1,-2,0);
+		limbs["Left Arm"].CFrame=character["Left Leg"].CFrame*CFrame.new(-1,-2,0);
+		limbs["Right Arm"].CFrame=character["Right Leg"].CFrame*CFrame.new(1,-2,0);
+	end
+end)
+
+
+Speed.MouseButton1Click:Connect(function(Plr)
+	local Value = Value.Text
+	local savValue = Instance.new("NumberValue")
+	savValue.Value = Value
+	local Deafult = 50
+	local Humanoid = game.Players.LocalPlayer.Character.Humanoid
+	if savValue.Value > Deafult then
+		repeat
+			wait(0.1)
+			Humanoid.WalkSpeed = Humanoid.JumpPower + 1
+			print(Humanoid.JumpPower)
+		until Humanoid.WalkSpeed == savValue.Value
+	else
+		repeat
+			wait(0.1)
+			Humanoid.WalkSpeed = Humanoid.JumpPower - 1
+			print(Humanoid.JumpPower)
+		until Humanoid.WalkSpeed == savValue.Value
+	end
+end)
+
+Jump.MouseButton1Click:Connect(function(Plr)
+	local Value = Value.Text
+	local savValue = Instance.new("NumberValue")
+	savValue.Value = Value
+	local Deafult = 50
+	local Humanoid = game.Players.LocalPlayer.Character.Humanoid
+	if savValue.Value > Deafult then
+		repeat
+			wait(0.1)
+			Humanoid.JumpPower = Humanoid.JumpPower + 1
+			print(Humanoid.JumpPower)
+		until Humanoid.JumpPower == savValue.Value
+	else
+		repeat
+			wait(0.1)
+			Humanoid.JumpPower = Humanoid.JumpPower - 1
+			print(Humanoid.JumpPower)
+		until Humanoid.JumpPower == savValue.Value
+	end
+end)
+
+
+
+PlayerTp.MouseButton1Click:Connect(function()
+	game:GetService("UserInputService").InputBegan:connect(function(key)
+		if key.KeyCode == Enum.KeyCode.Q then --Replace E with the key you would like to be pressed
+			local ooooooof = Value.Text
+			local plr1 = game.Players.LocalPlayer.Character
+			local plr2 = game.Workspace:FindFirstChild(ooooooof)
+			plr1.HumanoidRootPart.CFrame = plr2.HumanoidRootPart.CFrame * CFrame.new(0,2,0)
+		end
+	end)
+end)
+
+
+BindTp.MouseButton1Click:Connect(function()
+		local KeyBindValue = KeyBindBox.Text
+		plr = game.Players.LocalPlayer
+		hum = plr.Character.HumanoidRootPart
+		mouse = plr:GetMouse()
+		if KeyBindValue == "" then
+			BindTpTitle.Text = "Enter a KeyBind!"
+			wait(3)
+			BindTpTitle.Text = "KeyBind"
+	end
+	game:GetService("TweenService"):Create(Roundify2,TweenInfo.new(0.3,Enum.EasingStyle.Bounce),{ImageColor3 = Color3.fromRGB(43, 255, 78)}):Play()
+
+		mouse.KeyDown:connect(function(key)
+			if key == KeyBindValue then
+				if mouse.Target then
+					hum.CFrame = CFrame.new(mouse.Hit.x, mouse.Hit.y + 5, mouse.Hit.z)
+				end
+			end
+	  end)
+end)
+
+
+plr = game.Players.LocalPlayer
+hum = plr.Character.HumanoidRootPart
+mouse = plr:GetMouse()
+mouse.KeyDown:connect(function(key)
+	if key == "-" then
+		Hub:TweenPosition(UDim2.new(0.229, 0, 0.193, 0),"In","Quad")
+	end
+end)
+
+
+Close.MouseButton1Click:Connect(function()
+	Hub:TweenPosition(UDim2.new(1.229, 0, 0.193, 0),"Out","Quad")
+end)
+
+Main.MouseButton1Click:Connect(function()
+	SettingsFrame.Visible = false
+	Functions.Visible = true
+	help.Visible = false
+	CreditsFrame.Visible = false
+end)
+
+Credits.MouseButton1Click:Connect(function()
+	SettingsFrame.Visible = false
+	Functions.Visible = false
+	help.Visible = false
+	CreditsFrame.Visible = true
+end)
+
+Help.MouseButton1Click:Connect(function()
+	SettingsFrame.Visible = false
+	Functions.Visible = false
+	help.Visible = true
+	CreditsFrame.Visible = false
+end)
+
+Settings.MouseButton1Click:Connect(function()
+	SettingsFrame.Visible = true
+	Functions.Visible = false
+	help.Visible = false
+	CreditsFrame.Visible = false
+end)
+
+Noclip.MouseButton1Click:Connect(function(Plr)
+	noclip = false
+	game:GetService('RunService').Stepped:connect(function()
+		if noclip then
+			game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+		end
+	end)
+	local	plr = game.Players.LocalPlayer
+	local	mouse = plr:GetMouse()
+	mouse.KeyDown:connect(function(key)
+
+		if key == "g" then
+			noclip = not noclip
+			game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+		end
+	end)
+	print('Created by FileExplorer')
+	print('Credits to Peyton for the ChangeState part of this script')
+end)
+-- Drag
+local function DRAG()
+	local script = Instance.new("Script", KinxHub)
+
+	local frame = script.Parent.Hub 
+	frame.Draggable = true
+	frame.Active = true
+	frame.Selectable = true
+end
+
+coroutine.wrap(DRAG)()
